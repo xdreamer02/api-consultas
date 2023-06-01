@@ -1,8 +1,9 @@
 import { Router } from 'express'
-import { getPeoplexDni, getPeoplexName } from '../controller/person.controller.js';
+import { getPeoplexDni } from '../controller/person.controller.js';
 const router = Router()
 
 router.get('/personass/:dni', getPeoplexDni)
+//router.get('/personass/:pat/:mat', getPersonByLastName)
 
 
 

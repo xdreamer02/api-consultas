@@ -17,11 +17,11 @@ export const getPeoplexDni = async (req, res) => {
     }
 }
 
-export const getPeoplexName = async (req, res) => {
+export const getPeoplexLast = async (req, res) => {
     try {
         const { name } = req.params;
         const { last } = req.params;
-        const [row] = await pool.query('select * from BD_LIC_TEMP where nombre=? and apellido_pat = ?', [name], [last]);
+        const [row] = await pool.query('select * from reg50 where nombre=? and apellido_pat = ?', [name], [last]);
 
         if (row.length <= 0) {
             return res.status(404).json({ message: "Person not found" })
