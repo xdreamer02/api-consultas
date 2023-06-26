@@ -22,6 +22,6 @@ export const pool = createPool({
     host: 'localhost',
     user: 'root',
     password: 'soporte2023',
-    database: 'registro_nacional012022', //demopersonas
+    database: 'demopersonas', //demopersonas -- registro_nacional012022
     port: '3306'
 })
