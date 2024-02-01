@@ -25,6 +25,7 @@ export const getPeoples = async (req,res) => {
 //con procedure
 export const getPeoplexDni = async (req, res) => {
     try {
+        res.setHeader('Access-Control-Allow-Origin', '*');
         const { dni } = req.params;
         const [row] = await pool.query('CALL buscarxDNI(?)', [dni]);
         if (row.length <= 0) {
